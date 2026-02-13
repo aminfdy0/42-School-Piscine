@@ -17,7 +17,7 @@ void	ft_print_alphabet(void)
 	char	start;
 	char	end;
 
-	start = 'a';
+	start = 97;
 	end = 'z';
 	while (start <= end)
 	{
@@ -25,7 +25,9 @@ void	ft_print_alphabet(void)
 		start++;
 	}
 }
-/*int	main(void)
+/*
+int	main(void)
 {
 	ft_print_alphabet();
-}*/
+}
+*/

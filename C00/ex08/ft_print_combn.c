@@ -13,9 +13,9 @@
 #include <unistd.h>
 //#include <stdio.h>
 
-void	ft_putchar(char c)
+void	ft_putchar(char fdy)
 {
-	write(1, &c, 1);
+	write(1, &fdy, 1);
 }
 
 void	print_array(char v[], int size, int last)

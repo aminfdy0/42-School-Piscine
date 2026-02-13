@@ -30,19 +30,19 @@ void	ft_print_numbers(int x, int y)
 
 void	ft_print_comb2(void)
 {
-	int	x;
-	int	y;
+	int	xx;
+	int	yy;
 
-	x = 0;
-	while (x <= 98)
+	xx = 0;
+	while (xx <= 98)
 	{
-		y = x + 1;
-		while (y <= 99)
+		yy = xx + 1;
+		while (yy <= 99)
 		{
-			ft_print_numbers(x, y);
-			y++;
+			ft_print_numbers(xx, yy);
+			yy++;
 		}
-		x++;
+		xx++;
 	}
 }
 /*

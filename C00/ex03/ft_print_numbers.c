@@ -14,7 +14,16 @@
 
 void	ft_print_numbers(void)
 {
-	write(1, "0123456789", 10);
+	int	first;
+	int	last;
+
+	first = '0';
+	last = '9';
+	while (first <= last)
+	{
+		write(1, &first, 1);
+		first++;
+	}
 }
 /*
 int main(void)

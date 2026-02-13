@@ -12,9 +12,9 @@
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putchar(char fdy)
 {
-	write(1, &c, 1);
+	write(1, &fdy, 1);
 }
 
 void	ft_putnbr(int nb)
@@ -38,7 +38,7 @@ void	ft_putnbr(int nb)
 /*
 int	main(void)
 {
-	ft_putnbr(2147483647); //INT_MAX
+	ft_putnbr(2147483648); //INT_MAX
 	ft_putchar(' ');
 	ft_putnbr(42);
 	ft_putchar(' ');
