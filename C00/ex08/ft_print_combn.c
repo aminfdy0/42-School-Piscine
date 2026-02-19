@@ -20,6 +20,7 @@ void	ft_putchar(char fdy)
 
 void	print_array(char v[], int size, int last)
 {
+	// This function for print arr + last var for ", "
 	int	i;
 
 	i = 0;
@@ -34,38 +35,37 @@ void	print_array(char v[], int size, int last)
 
 void	ft_print_combn(int n)
 {
-	char	comb[10];
-	char	max[10];
-	int		flag;
+	char	comb[10]; // Store Comb
+	char	max[10]; // Store Last Comb
+	int		index;
 	int		base;
 	int		i;
 
 	i = 0;
 	while (i < n)
 	{
-		comb[i] = i + 48;
-		max[i] = (10 - n) + i + 48;
+		comb[i] = i + 48; // store first comb | n = 3 -> 012
+		max[i] = (10 - n) + i + 48; // store first comb | n = 3 -> 789
 		i++;
 	}
 	print_array(comb, n, max[0]);
 	while (comb[0] != max[0])
 	{
-		flag = n - 1;
-		while (comb[flag] == max[flag])
-			--flag;
-		base = ++(comb[flag]);
-		while (flag < n - 1)
-			comb[flag++] = base++;
+		index = n - 1; // start checking from right side
+		while (comb[index] == max[index]) // if digit reached its max
+			--index; // move left
+		base = ++(comb[index]); // increase that digit by 1
+		while (index < n) // rebuild digits on the righ
+			comb[index++] = base++;
 		print_array(comb, n, max[0]);
 	}
 }
-/*
+
 int	main(void)
 {
-	ft_print_combn(1);
-	printf("\n\n");
-	ft_print_combn(5);
-	printf("\n\n");
-	ft_print_combn(9);
+	// ft_print_combn(2);
+	// printf("\n\n");
+	// ft_print_combn(5);
+	// printf("\n\n");
+	// ft_print_combn(9);
 }
-*/
